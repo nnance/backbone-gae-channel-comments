@@ -1,0 +1,33 @@
+application: backbone-gae-channel-comments
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /index\.html
+  static_files: client/index.html
+  upload: index\.html
+
+- url: /css
+  static_dir: client/css
+
+- url: /img
+  static_dir: client/img
+
+- url: /js
+  static_dir: client/js
+
+- url: /templates
+  static_dir: client/templates
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
