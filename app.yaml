@@ -13,6 +13,9 @@ handlers:
   static_files: client/index.html
   upload: index\.html
 
+- url: /components
+  static_dir: client/components
+
 - url: /css
   static_dir: client/css
 

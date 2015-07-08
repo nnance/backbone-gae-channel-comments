@@ -3,11 +3,12 @@ require.config({
   baseUrl: "/js/",
   paths: {
     templates: '../templates',
-    jquery: 'lib/jquery-1.8.3.min',
-    underscore: 'lib/underscore-min',
-    backbone: 'lib/backbone-min',
-    bootstrap: 'lib/bootstrap.min',
-    moment: 'lib/moment.min',
+    jquery: '../components/jquery/dist/jquery.min',
+    underscore: '../components/underscore/underscore-min',
+    backbone: '../components/backbone/backbone-min',
+    bootstrap: '../components/bootstrap/dist/js/bootstrap.min',
+    moment: '../components/moment/min/moment.min',
+    text : '../components/requirejs-text/text'
   },
   shim: {
     underscore: {
@@ -35,7 +36,7 @@ require([
   './MainRouter',
 ], function($, _, Backbone, MainRouter) {
 	'use strict';
-	
+
   MainRouter.initialize();
 
 });

@@ -1,0 +1,53 @@
+{
+  "name": "backbone-gae-channel-comments",
+  "version": "0.0.1",
+  "authors": [
+    "Nick Nance <nance.nick@gmail.com>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.8.3",
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "moment": "~2.10.3",
+    "requirejs-bower": "~2.1.18",
+    "requirejs-text": "~2.0.14"
+  },
+  "preen": {
+    "jquery": [
+      "dist/*.min.*"
+    ],
+    "backbone": [
+      "*-min.*"
+    ],
+    "underscore": [
+      "*-min.*"
+    ],
+    "bootstrap": [
+      "dist/css/*",
+      "dist/fonts/*",
+      "dist/js/*.min.*"
+    ],
+    "moment": [
+      "min/*.min.*"
+    ],
+    "requirejs-bower": [
+      "*.js"
+    ],
+    "requirejs-text": [
+      "*.js"
+    ]
+  }
+}
