@@ -5,6 +5,10 @@ api_version: 1
 threadsafe: yes
 
 handlers:
+- url: /
+  static_files: client/index.html
+  upload: index\.html
+
 - url: /index\.html
   static_files: client/index.html
   upload: index\.html
