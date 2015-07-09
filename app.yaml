@@ -32,7 +32,7 @@ handlers:
   static_files: client/favicon.ico
   upload: favicon\.ico
 
-- url: /(comments|main)
+- url: /(comments)
   script: routes.\1.app
 
 libraries:

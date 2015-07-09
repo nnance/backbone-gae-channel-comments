@@ -15,12 +15,23 @@
 # limitations under the License.
 #
 import webapp2
-from models.comment import Comment
+import logging
+import json
+from models import comment
 
-class MainHandler(webapp2.RequestHandler):
+class CommentListHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        logging.info('Getting all comments!')
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.write(json.dumps(comment.getList(100)))
+
+class CommentItemHandler(webapp2.RequestHandler):
+    def get(self, key):
+        logging.info('Getting comments ' + key)
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.write(json.dumps(comment.getItem(key)))
 
 app = webapp2.WSGIApplication([
-    ('/main', MainHandler)
-], debug=True)
+    (r'/comments', CommentListHandler),
+    (r'/comments/(\d+)', CommentItemHandler),
+])
