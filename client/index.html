@@ -10,31 +10,34 @@
     <meta name="author" content="Riccardo Coppola" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" media="screen">
   </head>
   <body>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Backbone.js comments</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="https://github.com/ricca509/backbonejs-comments-AMD" target="_blank">GitHub</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          </button>
+          <a class="navbar-brand" href="#">Backbone.js comments</a>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="https://github.com/nnance/backbone-gae-channel-comments" target="_blank">GitHub</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="span10">
+        <div class="col-md-10">
           <!--Body content-->
           <h2>Your interesting post</h2>
           <div id="content">
@@ -57,7 +60,7 @@
           </div>
 
         </div>
-        <div class="span2">
+        <div class="col-md-2">
           <!--Sidebar content-->
           <div id="commentsCountCountainer"></div>
         </div>
