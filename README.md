@@ -27,19 +27,19 @@ Server-side:
 * [gae channel api](https://cloud.google.com/appengine/docs/python/channel/)
 
 ## Getting Started
-
+The repo has everything needed to get started by just running the GAE server with the following command:
+### Starting GAE Server
+```
+dev_appserver.py .
+```
+The required dependencies are already included in the repo as it makes the deploymnent and development of the GAE application easier.  However, if you need to add or update the dependencies use the following:
 ### Install resources
 ```
 $ npm install -g bower preen
 ```
-
 ### Install dependencies
 ```
 $ bower install && preen
-```
-### Start GAE Server
-```
-dev_appserver.py .
 ```
 ## Feedback
 If you have any questions or feedback, feel free to contact me using [@NanceNick](https://twitter.com/NanceNick) on Twitter.
