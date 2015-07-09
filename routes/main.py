@@ -15,11 +15,12 @@
 # limitations under the License.
 #
 import webapp2
+from models.comment import Comment
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler)
+    ('/main', MainHandler)
 ], debug=True)

@@ -6,34 +6,34 @@ threadsafe: yes
 
 handlers:
 - url: /
-  static_files: ../client/index.html
+  static_files: client/index.html
   upload: index\.html
 
 - url: /index\.html
-  static_files: ../client/index.html
+  static_files: client/index.html
   upload: index\.html
 
 - url: /components
-  static_dir: ../client/components
+  static_dir: client/components
 
 - url: /css
-  static_dir: ../client/css
+  static_dir: client/css
 
 - url: /img
-  static_dir: ../client/img
+  static_dir: client/img
 
 - url: /js
-  static_dir: ../client/js
+  static_dir: client/js
 
 - url: /templates
-  static_dir: ../client/templates
+  static_dir: client/templates
 
 - url: /favicon\.ico
-  static_files: favicon.ico
+  static_files: client/favicon.ico
   upload: favicon\.ico
 
-- url: /.*
-  script: main.app
+- url: /(comments|main)
+  script: routes.\1.app
 
 libraries:
 - name: webapp2
