@@ -25,9 +25,21 @@ class CommentListHandler(webapp2.RequestHandler):
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write(json.dumps(comment.getList(100)))
 
+    def post(self):
+        #pop off the script name ('/api')
+        #self.request.path_info_pop()
+        #Load the JSON values that were sent to the server
+        comment = json.loads(self.request.body)
+        #Clever way to initialize the Data object without specifying each field
+        # newObject = globals()[self.request.path_info[1:]](**comment)
+        newObject = comment.Comment()
+        newObject(**comment)
+        #Returns the ID that was created
+        self.response.write(str(newObject.put().id()))
+
 class CommentItemHandler(webapp2.RequestHandler):
     def get(self, key):
-        logging.info('Getting comments ' + key)
+        logging.info('Getting comment: ' + key)
         self.response.headers['Content-Type'] = 'application/json'
         self.response.write(json.dumps(comment.getItem(key)))
 
